@@ -3,7 +3,7 @@ const path = require("node:path")
 const router = require("./src/routes/index.js")
 
 const app = express()
-
+app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.use(express.static(path.join(__dirname, "src/public")))
