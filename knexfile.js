@@ -8,11 +8,12 @@ module.exports = {
     client: 'sqlite3',
     connection: {
       filename: './src/database/app.db'
-    },
+    }, 
+    useNullAsDefault: true,
     migrations: {
       directory: path.join("./src/database/migrations")
     },
-    useNullAsDefault: true
+   
   },
   production: {
     client: 'pg',
